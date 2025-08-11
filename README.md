@@ -1,68 +1,86 @@
-# CodeIgniter 4 Application Starter
+# Narria
 
-## What is CodeIgniter?
+**Narria** adalah platform baca novel online berbasis CodeIgniter 4 yang memungkinkan pembaca menjelajahi berbagai novel, dan penulis (role **Author**) dapat mengunggah karya mereka sendiri.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+##  Fitur Utama
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- 🔐 **Autentikasi**: Login & pendaftaran pengguna (reader & author)
+- 📚 **Daftar Novel**: Halaman utama menampilkan daftar novel
+- 📖 **Detail Novel**: Halaman informasi novel lengkap dengan daftar bab
+- 🔍 **Pencarian & Filter**: Cari dan filter novel berdasarkan judul, penulis, atau kategori
+- 👤 **Profil Pengguna**: Halaman profil pengguna (reader/author)
+- 🛠 **Dashboard**:
+  - **Admin**: Kelola pengguna, novel, dan kategori
+  - **Author**: Kelola novel karya sendiri
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+##  Teknologi
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **Backend**: CodeIgniter 4  
+- **Frontend**:
+  - Bootstrap 4 (menggunakan Stisla Admin Template)
+  - Tailwind CSS
+- **Database**: MySQL
 
-## Installation & updates
+##  Instalasi & Setup
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Ikuti langkah-langkah berikut untuk menjalankan proyek di lingkungan lokal:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. Clone repositori:
+   ```bash
+   git clone https://github.com/Naaufal/narria.git
+   cd narria
 
-## Setup
+2. Install dependencies:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+```bash
+composer install
+```
 
-## Important Change with index.php
+3. Salin file environment dan setting konfigurasi:
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+```bash 
+cp env .env
+```
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+  - Buka file .env, sesuaikan:
+      - app.baseURL dengan URL aplikasi (misal http://localhost:8080/)
+      - Pengaturan database (hostname, database, username, password)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+4. Terapkan migrasi dan (opsional) seed data:
 
-## Repository Management
+```bash
+php spark migrate
+# Jika ada, jalankan seed:
+# php spark db:seed SomeSeeder
+```
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+5. Atur web server agar root mengarah ke folder public/, atau gunakan built-in server:
+```bash
+php spark serve --host=localhost --port=8080
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+6. Buka di browser:
 
-## Server Requirements
+    http://localhost:8080
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+Aturan Web Server & index.php
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Pastikan web server kamu mengarah ke folder public/, sebab index.php sudah dipindahkan kesana demi keamanan dan struktur yang baik—sesuai praktik di CodeIgniter 4
+GitHub+1
+.
+Prasyarat Server
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+Pastikan sistem memenuhi prasyarat berikut:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+    PHP ≥ 8.1
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+    Ekstensi PHP: intl, mbstring, json (aktif secara default), mysqlnd, dan libcurl (jika menggunakan HTTP/CURLRequest)
+    GitHub
+    .
+
+Screenshot
+
+Halaman utama Narria:
+Lisensi
+
+Lisensi proyek ini adalah MIT License, seperti terdapat di repositori. Silakan cek file LICENSE untuk detail lengkap.
