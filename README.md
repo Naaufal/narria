@@ -316,29 +316,16 @@ We welcome contributions from the community! Here's how you can help:
 - Respect the existing MVC structure
 
 ### **Types of Contributions**
-- 🐛 Bug fixes
-- ✨ New features
+- 🐛 Bug fixes and issue resolution
+- ✨ New features and enhancements
 - 📝 Documentation improvements
 - 🎨 UI/UX enhancements
 - 🔧 Performance optimizations
-- 🌐 Translations
+- 🌐 Translations and localization
+- 🧪 Testing and quality assurance
 
----
-
-## 📝 API Documentation
-
-### **Available Endpoints**
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `GET` | `/api/novels` | Get all novels | ❌ |
-| `GET` | `/api/novels/{id}` | Get novel details | ❌ |
-| `GET` | `/api/novels/{id}/chapters` | Get novel chapters | ❌ |
-| `POST` | `/api/novels` | Create new novel | ✅ |
-| `PUT` | `/api/novels/{id}` | Update novel | ✅ |
-| `DELETE` | `/api/novels/{id}` | Delete novel | ✅ |
-
-*For complete API documentation, see [API.md](docs/API.md)*
+### **Development Team**
+Special thanks to our core development team who built this platform. For major changes or feature requests, please coordinate with the team through GitHub issues.
 
 ---
 
@@ -398,16 +385,22 @@ copies or substantial portions of the Software.
 
 ---
 
-## 👨‍💻 Author & Maintainer
+## 👥 Development Team
 
 <div align="center">
 
-**[Naaufal](https://github.com/naaufal)**
+**Narria Development Team**
 
-[![GitHub](https://img.shields.io/badge/GitHub-naaufal-black?style=flat-square&logo=github)](https://github.com/naaufal)
-[![Email](https://img.shields.io/badge/Email-Contact-blue?style=flat-square&logo=gmail)](mailto:naaufal.dev@gmail.com)
+This project is developed by a team of 4 dedicated developers:
 
-*Developed with ❤️ by [naaufal](https://github.com/naaufal)*
+| Role | Developer | GitHub |
+|------|-----------|---------|
+| 🚀 **Project Lead** | [Naaufal](https://github.com/naaufal) | [@naaufal](https://github.com/naaufal) |
+| 💻 **Developer** | Developer 2 | [@username2](#) |
+| 🎨 **UI/UX Developer** | Developer 3 | [@username3](#) |
+| 🗄️ **Database Developer** | Developer 4 | [Naaufal](https://github.com/naaufal) | [@username4](#) |
+
+*Developed with ❤️ by Narria Team*
 
 </div>
 
@@ -429,7 +422,7 @@ If you found this project helpful, please consider:
 
 - **Issues**: [GitHub Issues](https://github.com/naaufal/narria/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/naaufal/narria/discussions)
-- **Email**: [naaufal.dev@gmail.com](mailto:naaufal.dev@gmail.com)
+- **Team Lead**: [naaufal.dev@gmail.com](mailto:naaufal.dev@gmail.com)
 
 ---
 
