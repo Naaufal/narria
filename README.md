@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-# CodeIgniter 4 Application Starter
-
-## What is CodeIgniter?
-
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
-
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
-
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
-
-## Installation & updates
-
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
-
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-=======
 # 📚 Narria - Novel Reading Platform
 
 ![Narria Banner](https://private-user-images.githubusercontent.com/182610146/477186337-67dc0dfc-bbd7-451c-b160-60eeb991804a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUwNTMzNTUsIm5iZiI6MTc1NTA1MzA1NSwicGF0aCI6Ii8xODI2MTAxNDYvNDc3MTg2MzM3LTY3ZGMwZGZjLWJiZDctNDUxYy1iMTYwLTYwZWViOTkxODA0YS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxM1QwMjQ0MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01MmJjNDhiMDIwZWQxNzkwZmE0NDE5YzU2M2NlMTc3YWE1MTA3YzYzYjVmYjFkOWI3MjA1YjAyYjc0N2RlM2E3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.c6fbdXxoYVx_gPSka8Zn_1WX4iy3tPb4hgW2StDzxsE)
@@ -468,7 +398,7 @@ This project is developed by a team of 4 dedicated developers:
 | 🚀 **Project Lead** | [Naaufal](https://github.com/naaufal) | [@naaufal](https://github.com/naaufal) |
 | 💻 **Developer** | Developer 2 | [@username2](#) |
 | 🎨 **UI/UX Developer** | Developer 3 | [@username3](#) |
-| 🗄️ **Database Developer** | Developer 4 | [Naaufal](https://github.com/naaufal) | [@username4](#) |
+| 🗄️ **Database Developer** | Developer 4 | [@username4](#) |
 
 *Developed with ❤️ by Narria Team*
 
@@ -501,4 +431,3 @@ If you found this project helpful, please consider:
 **⭐ Don't forget to star this repo if it helped you! ⭐**
 
 </div>
->>>>>>> 5b99cc278d187e65c5ac1a7a10e5037189010657
