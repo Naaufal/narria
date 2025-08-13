@@ -31,7 +31,10 @@ class Profile extends BaseController
         $userId = session()->get('user_id');
         
         if ($username) {
+<<<<<<< HEAD
             // Cari user berdasarkan username (yang sudah clean)
+=======
+>>>>>>> 5b99cc278d187e65c5ac1a7a10e5037189010657
             $user = $this->userModel->where('username', $username)->first();
             if (!$user) {
                 throw new \CodeIgniter\Exceptions\PageNotFoundException('User tidak ditemukan');
@@ -52,12 +55,18 @@ class Profile extends BaseController
             'isOwnProfile' => $isOwnProfile
         ];
 
+<<<<<<< HEAD
         // Add author stats if user is author
+=======
+>>>>>>> 5b99cc278d187e65c5ac1a7a10e5037189010657
         if ($user->role === 'author') {
             $data['authorStats'] = $this->userModel->getAuthorStats($user->id);
         }
 
+<<<<<<< HEAD
         // Add reader stats if own profile
+=======
+>>>>>>> 5b99cc278d187e65c5ac1a7a10e5037189010657
         if ($isOwnProfile) {
             $data['readerStats'] = $this->getReaderStats($userId);
         }
