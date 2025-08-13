@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/naaufal/narria?style=social)](https://github.com/naaufal/narria/stargazers)
 
-[Demo](#) • [Documentation](#) • [Report Bug](https://github.com/naaufal/narria/issues) • [Request Feature](https://github.com/naaufal/narria/issues)
+[Report Bug](https://github.com/naaufal/narria/issues) • [Request Feature](https://github.com/naaufal/narria/issues)
 
 </div>
 
@@ -129,10 +129,10 @@ erDiagram
 ## 🛠️ Tech Stack
 
 ### **Backend**
-- **Framework**: CodeIgniter 4
+- **Framework**: CodeIgniter 4 (MVC Pattern)
 - **Language**: PHP 8.1+
 - **Database**: MySQL/MariaDB
-- **Authentication**: CodeIgniter 4 Authentication
+- **Authentication**: CodeIgniter 4 Shield/Session-based Auth
 
 ### **Frontend**
 - **CSS Framework**: Bootstrap 4
@@ -228,43 +228,34 @@ Open your browser and visit: **http://localhost:8080**
 
 ---
 
-## 🔧 Production Deployment
+## 🎯 Development Notes
 
-### **Web Server Configuration**
+### **MVC Architecture**
+This project follows CodeIgniter 4's MVC (Model-View-Controller) pattern:
 
-#### **Apache (.htaccess)**
-Make sure your virtual host points to the `public/` folder:
-```apache
-DocumentRoot /path/to/narria/public
+- **Models** (`app/Models/`): Handle database operations and business logic
+- **Views** (`app/Views/`): Handle UI presentation and templates  
+- **Controllers** (`app/Controllers/`): Handle user requests and coordinate between models and views
 
-<Directory /path/to/narria/public>
-    AllowOverride All
-    Require all granted
-</Directory>
+### **Key Directories**
+```
+narria/
+├── app/
+│   ├── Controllers/     # Request handling logic
+│   ├── Models/          # Database models
+│   ├── Views/           # HTML templates
+│   ├── Config/          # Application configuration
+│   └── Database/        # Migrations and seeders
+├── public/              # Web accessible files
+├── writable/            # Cache, logs, session data
+└── vendor/              # Composer dependencies
 ```
 
-#### **Nginx**
-```nginx
-server {
-    listen 80;
-    server_name your-domain.com;
-    root /path/to/narria/public;
-    index index.php index.html;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-}
-```
-
-> **⚠️ Security Note**: Always point your web server to the `public/` directory for security best practices.
+### **Development Workflow**
+1. **Database changes**: Create migrations in `app/Database/Migrations/`
+2. **New features**: Follow Controller → Model → View pattern
+3. **Styling**: Edit CSS/JS files in `public/assets/`
+4. **Testing**: Use built-in PHP server with `php spark serve`
 
 ---
 
@@ -317,11 +308,12 @@ We welcome contributions from the community! Here's how you can help:
 5. **Open** a Pull Request
 
 ### **Contribution Guidelines**
-- Follow PSR-12 coding standards
+- Follow PSR-12 coding standards for PHP
+- Follow CodeIgniter 4 best practices and conventions
 - Write meaningful commit messages
-- Add tests for new features
 - Update documentation when needed
-- Respect the existing code structure
+- Test with `php spark serve` before submitting
+- Respect the existing MVC structure
 
 ### **Types of Contributions**
 - 🐛 Bug fixes
@@ -368,16 +360,19 @@ If you discover a security vulnerability, please send an email to [security@narr
 
 ### **Current Version**: v1.0.0
 ### **Development Status**: Active Development 🚧
+### **Environment**: Local Development (php spark serve)
 
 ### **Roadmap**
-- [ ] 📱 Mobile App (React Native)
+- [ ] 🌐 Live Demo Deployment
+- [ ] 📱 Mobile-Responsive Improvements
 - [ ] 🌐 Multi-language Support
-- [ ] 💬 Comment System
+- [ ] 💬 Comment System for Novels
 - [ ] 📧 Email Notifications
-- [ ] 📈 Analytics Dashboard
+- [ ] 📈 Reading Analytics Dashboard
 - [ ] 🎨 Theme Customization
-- [ ] 📚 Reading Lists
+- [ ] 📚 Reading Lists & Collections
 - [ ] 🏆 Achievement System
+- [ ] 🔌 REST API (Future consideration)
 
 ---
 
@@ -410,7 +405,7 @@ copies or substantial portions of the Software.
 **[Naaufal](https://github.com/naaufal)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-naaufal-black?style=flat-square&logo=github)](https://github.com/naaufal)
-[![Email](https://img.shields.io/badge/Email-Contact-blue?style=flat-square&logo=gmail)](mailto:your-email@example.com)
+[![Email](https://img.shields.io/badge/Email-Contact-blue?style=flat-square&logo=gmail)](mailto:naaufal.dev@gmail.com)
 
 *Developed with ❤️ by [naaufal](https://github.com/naaufal)*
 
@@ -434,7 +429,7 @@ If you found this project helpful, please consider:
 
 - **Issues**: [GitHub Issues](https://github.com/naaufal/narria/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/naaufal/narria/discussions)
-- **Email**: [contact@narria.com](mailto:contact@narria.com)
+- **Email**: [naaufal.dev@gmail.com](mailto:naaufal.dev@gmail.com)
 
 ---
 
